@@ -30,7 +30,7 @@
 .info {
     width: 100%;
     display: flex;
-    flex-direction: column; /* 将 ul 以垂直方向排列 */
+    flex-direction: column;
     border-top: solid 1px black;
     padding: 10px 0;
 }
@@ -132,15 +132,14 @@ const formatDate = (dateTime) => {
 }
 const order_page_preparing = async () => {
     try {
-        const url = 'http://localhost:3100/stepbrothers/console/order_management_page' // 替換成後端 API 的 URL
+        const url = 'http://localhost:3100/stepbrothers/console/order_management_page'
         const headers = {
-            // 可以在這裡添加自定義的 headers
-            'Content-Type': 'application/json', // 例如這裡設定請求的 Content-Type 為 JSON
+            'Content-Type': 'application/json',
         }
 
         const response = await fetch(url, {
-            method: 'GET', // 使用 GET 方法
-            headers: headers, // 設定 headers
+            method: 'GET',
+            headers: headers,
         })
 
         if (!response.ok) {
@@ -158,10 +157,9 @@ const order_page_preparing = async () => {
 
 const send = async (id, data) => {
     try {
-        const url = 'http://localhost:3100/stepbrothers/console/switch_order_status' // 替換成後端 API 的 URL
+        const url = 'http://localhost:3100/stepbrothers/console/switch_order_status'
         const headers = {
-            // 可以在這裡添加自定義的 headers
-            'Content-Type': 'application/json', // 例如這裡設定請求的 Content-Type 為 JSON
+            'Content-Type': 'application/json',
         }
 
         const dataToSend = {
@@ -171,9 +169,9 @@ const send = async (id, data) => {
             purchase_status: data.purchases[0].purchase_status,
         }
         const response = await fetch(url, {
-            method: 'PUT', // 使用 GET 方法
-            headers: headers, // 設定 headers
-            body: JSON.stringify(dataToSend), // 将数据对象转为 JSON 字符串并放入请求的 body 中
+            method: 'PUT',
+            headers: headers,
+            body: JSON.stringify(dataToSend),
         })
         if (!response.ok) {
             throw new Error('Network response was not ok.')

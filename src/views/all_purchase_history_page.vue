@@ -46,9 +46,9 @@ ul {
 }
 .products li {
     display: flex;
-    gap: 10px; /* 添加间距，可以根据需要调整 */
-    list-style: none; /* 移除默认的列表样式 */
-    padding: 0; /* 移除默认的内边距 */
+    gap: 10px;
+    list-style: none;
+    padding: 0;
     height: 50px;
     margin: auto;
     justify-content: center;
@@ -88,7 +88,6 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin: 0 0 0 10px; */
 }
 #search input {
     margin: 10px;
@@ -177,15 +176,14 @@ const formatDate = (dateTime) => {
 }
 const all_purchase_history_page = async () => {
     try {
-        const url = 'http://localhost:3100/stepbrothers/all_purchase_history_page' // 替換成後端 API 的 URL
+        const url = 'http://localhost:3100/stepbrothers/all_purchase_history_page'
         const headers = {
-            // 可以在這裡添加自定義的 headers
-            'Content-Type': 'application/json', // 例如這裡設定請求的 Content-Type 為 JSON
+            'Content-Type': 'application/json',
         }
 
         const response = await fetch(url, {
-            method: 'GET', // 使用 GET 方法
-            headers: headers, // 設定 headers
+            method: 'GET',
+            headers: headers,
         })
 
         if (!response.ok) {
@@ -208,7 +206,7 @@ const search_history = async () => {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json', // 根據你的 API 需求設定
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 index: searchText.value,
@@ -250,7 +248,6 @@ const downloadExcel1 = async () => {
 }
 
 onMounted(() => {
-    // 當組件掛載後，模擬後端回傳的 JSON 資料
     all_purchase_history_page()
 })
 </script>

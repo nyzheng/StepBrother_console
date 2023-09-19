@@ -29,18 +29,18 @@
     display: flex;
     align-items: center;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* 添加過渡效果 */
+    transition: background-color 0.3s, color 0.3s;
 }
 #nav li:hover {
-    background-color: #ffffff; /* 背景變成白色 */
-    color: #000000; /* 文字變成黑色 */
+    background-color: #ffffff;
+    color: #000000;
 }
 #nav a {
     text-decoration: none;
 }
 #nav li.active {
-    background-color: #ffffff; /* 背景變成白色 */
-    color: #000000; /* 文字變成黑色 */
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* 電腦版的 CSS 規則 */

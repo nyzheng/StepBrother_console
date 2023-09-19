@@ -1,13 +1,13 @@
 <style scoped>
 .breadcrumb {
     display: flex;
-    background-color: #f5f5f5; /* 修改背景顏色 */
+    background-color: #f5f5f5;
     font-family: 'Jockey One', sans-serif;
-    font-size: 14px; /* 調整字體大小 */
-    padding: 10px; /* 調整上下 padding */
+    font-size: 14px;
+    padding: 10px;
     box-sizing: border-box;
     text-align: center;
-    border-bottom: 1px solid #ccc; /* 添加底部邊框 */
+    border-bottom: 1px solid #ccc;
 }
 a {
     text-decoration: none;
@@ -18,12 +18,12 @@ a {
     margin: 0 1px;
 }
 .router-link {
-    margin: 0 5px; /* 調整鏈接之間的間距 */
-    color: #333; /* 修改鏈接顏色 */
-    transition: color 0.3s; /* 添加顏色過渡效果 */
+    margin: 0 5px;
+    color: #333;
+    transition: color 0.3s;
 }
 .router-link:hover {
-    color: #007bff; /* 修改鼠標懸停時的顏色 */
+    color: #007bff;
 }
 </style>
 <template>

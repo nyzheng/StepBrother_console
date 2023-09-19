@@ -62,9 +62,9 @@ ul {
 }
 .products li {
     display: flex;
-    gap: 10px; /* 添加间距，可以根据需要调整 */
-    list-style: none; /* 移除默认的列表样式 */
-    padding: 0; /* 移除默认的内边距 */
+    gap: 10px;
+    list-style: none;
+    padding: 0;
     width: 160px;
     height: 50px;
     margin: auto;
@@ -209,14 +209,14 @@ const toggleDetail = async (productId) => {
 
 const merchandise_management_page = async () => {
     try {
-        const url = 'http://localhost:3100/stepbrothers/console/merchandise_management_page' // 替換成後端 API 的 URL
+        const url = 'http://localhost:3100/stepbrothers/console/merchandise_management_page'
         const headers = {
-            'Content-Type': 'application/json', // 例如這裡設定請求的 Content-Type 為 JSON
+            'Content-Type': 'application/json',
         }
 
         const response = await fetch(url, {
-            method: 'GET', // 使用 GET 方法
-            headers: headers, // 設定 headers
+            method: 'GET',
+            headers: headers,
         })
 
         if (!response.ok) {
@@ -231,17 +231,17 @@ const merchandise_management_page = async () => {
 
 const product_open_storage = async (productId) => {
     try {
-        const url = 'http://localhost:3100/stepbrothers/console/product_open_storage' // 替換成後端 API 的 URL
+        const url = 'http://localhost:3100/stepbrothers/console/product_open_storage'
         const headers = {
-            'Content-Type': 'application/json', // 例如這裡設定請求的 Content-Type 為 JSON
+            'Content-Type': 'application/json',
         }
         console.log(productId)
         const sendID = {
             product_id: productId,
         }
         const response = await fetch(url, {
-            method: 'POST', // 使用 GET 方法
-            headers: headers, // 設定 headers
+            method: 'POST',
+            headers: headers,
             body: JSON.stringify(sendID),
         })
 
@@ -295,7 +295,7 @@ const search_products = async () => {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json', // 根據你的 API 需求設定
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 index: searchText.value,

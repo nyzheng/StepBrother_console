@@ -93,15 +93,14 @@ const handleFileUpload = (event) => {
 //獲取後端產品資料
 const brand_name = async () => {
     try {
-        const url = 'http://localhost:3100/stepbrothers/console/product_on_shelves_page' // 替換成後端 API 的 URL
+        const url = 'http://localhost:3100/stepbrothers/console/product_on_shelves_page'
         const headers = {
-            // 可以在這裡添加自定義的 headers
-            'Content-Type': 'application/json', // 例如這裡設定請求的 Content-Type 為 JSON
+            'Content-Type': 'application/json',
         }
 
         const response = await fetch(url, {
-            method: 'GET', // 使用 GET 方法
-            headers: headers, // 設定 headers
+            method: 'GET',
+            headers: headers,
         })
 
         if (!response.ok) {
@@ -119,7 +118,6 @@ const brand_name = async () => {
 const upload = async () => {
     try {
         const url = 'http://localhost:3100/stepbrothers/console/submit_on_shelves'
-
         // 使用 FormData 來包裹資料
         const formData = new FormData()
         for (let i = 0; i < selectedImages.value.length; i++) {
@@ -137,14 +135,13 @@ const upload = async () => {
 
         const response = await fetch(url, {
             method: 'POST',
-            body: formData, // 這裡不需設定 Content-Type，fetch 會自動設定為 multipart/form-data
+            body: formData,
         })
 
         if (!response.ok) {
             alert('上傳失敗，請檢查商品名稱是否已存在')
             throw new Error('Network response was not ok.')
         }
-
         // 重新載入頁面
         alert('上傳成功!')
         window.location.reload()
